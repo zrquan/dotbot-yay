@@ -80,9 +80,6 @@ class Yay(dotbot.Plugin):
 
         self._log.info(f'Installing "{pkg}". Please wait...')
 
-        # needed to avoid conflicts due to locking
-        time.sleep(1)
-
         proc = subprocess.Popen(
             cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
         )
